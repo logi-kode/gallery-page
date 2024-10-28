@@ -1,0 +1,77 @@
+.flex-container {
+    display: flex;
+    height: 200px;
+    margin-bottom: 20px;
+    background-color: black;
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+    background-color: bisque;
+    margin: 25px;
+    animation: translating 5s infinite;
+    transition: 450ms ease-in;
+}
+
+.box1 {
+    height: 150px;
+    width: 150px;
+    background-color:brown;
+    margin: 25px;
+    animation: scaling 5s infinite;
+}
+
+.box:hover {
+    filter: blur(15px) grayscale(50%);
+}
+
+.flex-start {
+    justify-content: flex-start;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.center {
+    justify-content: center;
+}
+
+/*
+Space Container
+*/
+
+.space-around {
+    justify-content: space-around;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}
+
+/*CSS Animation*/
+@keyframes scaling {
+    0% { transform: scale(1); }
+    25% {  transform: scale(1.25);}
+    50% {transform: scale(1.5);}
+    75% {transform: scale(1.75);}
+    100% {transform: scale(2);}
+}
+
+@keyframes translating {
+    0% { transform: translateY(0px); }
+    25% { transform: translateY(20px); }
+    50% { transform: translateY(40px); }
+    75% { transform: translateY(-60px); }
+    100% { transform: translateY(80px); }
+}
+
+@keyframes filtering {
+    0% {filter: brightness(0);}
+    100% {filter: brightness(1);}
+}
